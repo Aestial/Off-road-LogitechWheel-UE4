@@ -212,6 +212,9 @@ void ABuggyPawn::UpdateWheelEffects(float DeltaTime)
 
 			const bool bIsActive = DustPSC[i] != NULL && !DustPSC[i]->bWasDeactivated && !DustPSC[i]->bWasCompleted;
 			UParticleSystem* CurrentFX = DustPSC[i] != NULL ? DustPSC[i]->Template : NULL;
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::FromInt(i));
+
 			if (WheelFX != NULL && (CurrentFX != WheelFX || !bIsActive))
 			{
 				if (DustPSC[i] == NULL || !DustPSC[i]->bWasDeactivated)

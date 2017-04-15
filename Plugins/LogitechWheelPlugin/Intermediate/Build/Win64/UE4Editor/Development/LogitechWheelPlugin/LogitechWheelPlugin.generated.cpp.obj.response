@@ -22,11 +22,11 @@
 /wd4838
 /w44668
 /I "C:\Program Files\Epic Games\UE_4.15\Engine\Source"
-/I C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Source\LogitechWheelPlugin\Private
-/I C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Source
-/I C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Source\LogitechWheelPlugin\Public
-/I C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Inc\LogitechWheelPlugin
-/I C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Source\LogitechWheelPlugin
+/I C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Source\LogitechWheelPlugin\Private
+/I C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Source
+/I C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Source\LogitechWheelPlugin\Public
+/I C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Inc\LogitechWheelPlugin
+/I C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Source\LogitechWheelPlugin
 /I "C:\Program Files\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public"
 /I "C:\Program Files\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Internationalization"
 /I "C:\Program Files\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Async"
@@ -424,9 +424,9 @@
 /DMESHUTILITIES_API=
 /DKISMET_API=DLLIMPORT
 /DNETWORKREPLAYSTREAMING_API=
-"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Inc\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp"
-/Fo"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.obj"
-/Fd"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.pdb"
+"C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Inc\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp"
+/Fo"C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.obj"
+/Fd"C:\Users\Meli\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.pdb"
 /TP
 /GR-
 /W4
