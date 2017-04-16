@@ -1,0 +1,7 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4\Development\LogitechWheelPlugin\Module.LogitechWheelPlugin.cpp.obj"
+"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.obj"
+/OUT:"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Binaries\Win64\UE4-LogitechWheelPlugin.lib"

@@ -1,0 +1,23 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-LogitechWheelPlugin-71.dll"
+/IGNORE:4221
+/LIBPATH:"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Logitech\lib\Win64"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\Module.LogitechWheelPlugin.cpp.obj"
+"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-LogitechWheelPlugin-71.lib"

@@ -6,6 +6,7 @@
 #include "WheeledVehicle.h"
 #include "BuggyPawn.generated.h"
 
+
 class AVehicleTrackPoint;
 class UVehicleDustType;
 class AVehicleImpactEffect;
@@ -219,6 +220,12 @@ protected:
 
 	/** Plays explosion particle and audio. */
 	void PlayDestructionFX();
+
+	//////////////////////////////////////////////////////////////////////////
+	// FORCE FEEDBACK
+
+	/** Updates Dirt Road Force Effect */
+	void UpdateWheelDirtForce(float power);
 
 protected:
 	/** Returns SpringArm subobject **/

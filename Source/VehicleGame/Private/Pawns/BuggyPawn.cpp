@@ -13,6 +13,7 @@
 
 #include "AudioThread.h"
 
+
 TMap<uint32, ABuggyPawn::FVehicleDesiredRPM> ABuggyPawn::BuggyDesiredRPMs;
 
 ABuggyPawn::ABuggyPawn(const FObjectInitializer& ObjectInitializer) : 
@@ -184,6 +185,11 @@ void ABuggyPawn::SpawnNewWheelEffect(int WheelIndex)
 	DustPSC[WheelIndex]->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, GetVehicleMovement()->WheelSetups[WheelIndex].BoneName);
 }
 
+void ABuggyPawn::UpdateWheelDirtForce(float power)
+{
+	//InputDevice.WheelPlayDirtRoadEffect(0, power);
+}
+
 void ABuggyPawn::UpdateWheelEffects(float DeltaTime)
 {
 	if (GetVehicleMovement() && bTiresTouchingGround == false && LandingSound)	//we don't update bTiresTouchingGround until later in this function, so we can use it here to determine whether we're landing
@@ -213,7 +219,7 @@ void ABuggyPawn::UpdateWheelEffects(float DeltaTime)
 			const bool bIsActive = DustPSC[i] != NULL && !DustPSC[i]->bWasDeactivated && !DustPSC[i]->bWasCompleted;
 			UParticleSystem* CurrentFX = DustPSC[i] != NULL ? DustPSC[i]->Template : NULL;
 
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::FromInt(i));
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Wheel " + FString::FromInt(i) + "Dust effect: " + WheelFX->GetName() );
 
 			if (WheelFX != NULL && (CurrentFX != WheelFX || !bIsActive))
 			{
