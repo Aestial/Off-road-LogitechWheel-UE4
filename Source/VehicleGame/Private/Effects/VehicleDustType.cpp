@@ -25,6 +25,24 @@ UParticleSystem* UVehicleDustType::GetDustFX(UPhysicalMaterial* PhysMaterial, fl
 	return WheelFX;
 }
 
+float UVehicleDustType::GetFeedbackForce(UPhysicalMaterial* PhysMaterial, float CurrentSpeed)
+{
+	EPhysicalSurface SurfaceType = UPhysicalMaterial::DetermineSurfaceType(PhysMaterial);
+	float FeedbackForce = 0.0f;
+
+	switch (SurfaceType)
+	{
+	case VEHICLE_SURFACE_Asphalt:		FeedbackForce = AsphaltFeedbackForce; break;
+	case VEHICLE_SURFACE_Dirt:			FeedbackForce = DirtFeedbackForce; break;
+	case VEHICLE_SURFACE_Water:			FeedbackForce = WaterFeedbackForce; break;
+	case VEHICLE_SURFACE_Grass:			FeedbackForce = GrassFeedbackForce; break;
+	case VEHICLE_SURFACE_Gravel:		FeedbackForce = GravelFeedbackForce; break;
+	default:							FeedbackForce = 0; break;
+	}
+
+	return FeedbackForce * FMath::Abs(CurrentSpeed)/4500.0f;
+}
+
 UParticleSystem* UVehicleDustType::GetWheelFX(TEnumAsByte<EPhysicalSurface> MaterialType)
 {
 	UParticleSystem* WheelFX = NULL;

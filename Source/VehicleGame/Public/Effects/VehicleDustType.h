@@ -52,11 +52,35 @@ class UVehicleDustType : public UDataAsset
 	float GrassMinSpeed;
 
 	/** min speed to show FX on gravel */
-	UPROPERTY(EditDefaultsOnly, Category=Speed)
+	UPROPERTY(EditDefaultsOnly, Category= Speed)
 	float GravelMinSpeed;
+
+	// FEEDBACK FORCE
+	/** min speed to show FX on asphalt */
+	UPROPERTY(EditDefaultsOnly, Category = Force)
+	float AsphaltFeedbackForce;
+
+	/** min speed to show FX on dirt */
+	UPROPERTY(EditDefaultsOnly, Category = Force)
+	float DirtFeedbackForce;
+
+	/** min speed to show FX on water */
+	UPROPERTY(EditDefaultsOnly, Category = Force)
+	float WaterFeedbackForce;
+
+	/** min speed to show FX on grass */
+	UPROPERTY(EditDefaultsOnly, Category = Force)
+	float GrassFeedbackForce;
+
+	/** min speed to show FX on gravel */
+	UPROPERTY(EditDefaultsOnly, Category = Force)
+	float GravelFeedbackForce;
 
 	/** determine correct FX */
 	UParticleSystem* GetDustFX(UPhysicalMaterial* PhysMaterial, float CurrentSpeed);
+
+	/** get feedback force for material type */
+	float GetFeedbackForce(UPhysicalMaterial* PhysMaterial, float CurrentSpeed);
 
 protected:
 
@@ -65,4 +89,5 @@ protected:
 
 	/** get min speed for material type */
 	float GetMinSpeed(TEnumAsByte<EPhysicalSurface> MaterialType);
+
 };

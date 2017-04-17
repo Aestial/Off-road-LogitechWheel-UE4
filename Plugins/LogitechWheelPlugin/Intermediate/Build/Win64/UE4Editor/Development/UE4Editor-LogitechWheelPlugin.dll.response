@@ -16,7 +16,7 @@
 /ignore:4199
 /ignore:4099
 /DELAYLOAD:"d3d12.dll"
-/LIBPATH:"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Logitech\lib\Win64"
+/LIBPATH:"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Logitech\lib\Win64"
 /NODEFAULTLIB:"LIBCMT"
 /NODEFAULTLIB:"LIBCPMT"
 /NODEFAULTLIB:"LIBCMTD"
@@ -27,8 +27,8 @@
 /NODEFAULTLIB:"LIBCP"
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
-"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\Module.LogitechWheelPlugin.cpp.obj"
-"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.obj"
+"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\Module.LogitechWheelPlugin.cpp.obj"
+"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\LogitechWheelPlugin.generated.cpp.obj"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\LogitechWheelPlugin\PCLaunch.rc.res"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
 "delayimp.lib"
@@ -63,7 +63,7 @@
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputDevice.lib"
-/OUT:"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Binaries\Win64\UE4Editor-LogitechWheelPlugin.dll"
-/IMPLIB:"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-LogitechWheelPlugin.suppressed.lib"
-/PDB:"C:\Users\aesti\Documents\GitHub\Contrabando\Plugins\LogitechWheelPlugin\Binaries\Win64\UE4Editor-LogitechWheelPlugin.pdb"
+/OUT:"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Binaries\Win64\UE4Editor-LogitechWheelPlugin.dll"
+/IMPLIB:"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-LogitechWheelPlugin.suppressed.lib"
+/PDB:"C:\Users\aesti\Documents\GitHub\ZombieHighwayVR\Plugins\LogitechWheelPlugin\Binaries\Win64\UE4Editor-LogitechWheelPlugin.pdb"
 /ignore:4078

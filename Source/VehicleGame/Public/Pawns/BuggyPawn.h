@@ -54,6 +54,13 @@ class ABuggyPawn : public AWheeledVehicle
 	UFUNCTION(BlueprintCallable, Category="Game|Vehicle")
 	bool IsHandbrakeActive() const;
 
+	//////////////////////////////////////////////////////////////////////////
+	// FORCE FEEDBACK
+
+	/** Updates Dirt Road Force Effect */
+	UFUNCTION(BlueprintCallable, Category = "Game|Vehicle")
+	float GetWheelDirtRoadPower() const;
+
 	/** get current speed */
 	float GetVehicleSpeed() const;
 
@@ -170,6 +177,9 @@ protected:
 	/** whether tires are currently touching ground */
 	bool bTiresTouchingGround;
 
+	/** Dirt road effect power*/
+	float WheelDirtRoadPower;
+
 	/** if skidding is shorter than this value, SkidSoundStop won't be played */
 	UPROPERTY(Category=Effects, EditDefaultsOnly)
 	float SkidDurationRequiredForStopSound;
@@ -220,12 +230,6 @@ protected:
 
 	/** Plays explosion particle and audio. */
 	void PlayDestructionFX();
-
-	//////////////////////////////////////////////////////////////////////////
-	// FORCE FEEDBACK
-
-	/** Updates Dirt Road Force Effect */
-	void UpdateWheelDirtForce(float power);
 
 protected:
 	/** Returns SpringArm subobject **/

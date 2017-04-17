@@ -56,6 +56,7 @@ ABuggyPawn::ABuggyPawn(const FObjectInitializer& ObjectInitializer) :
 	
 	SpringCompressionLandingThreshold = 250000.f;
 	bTiresTouchingGround = false;
+	WheelDirtRoadPower = 0;
 
 	ImpactEffectNormalForceThreshold = 100000.f;
 }
@@ -185,10 +186,6 @@ void ABuggyPawn::SpawnNewWheelEffect(int WheelIndex)
 	DustPSC[WheelIndex]->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, GetVehicleMovement()->WheelSetups[WheelIndex].BoneName);
 }
 
-void ABuggyPawn::UpdateWheelDirtForce(float power)
-{
-	//InputDevice.WheelPlayDirtRoadEffect(0, power);
-}
 
 void ABuggyPawn::UpdateWheelEffects(float DeltaTime)
 {
@@ -202,6 +199,7 @@ void ABuggyPawn::UpdateWheelEffects(float DeltaTime)
 	}
 
 	bTiresTouchingGround = false;
+	WheelDirtRoadPower = 0;
 
 	if (DustType && !bIsDying &&
 		GetVehicleMovement() && GetVehicleMovement()->Wheels.Num() > 0)
@@ -213,13 +211,16 @@ void ABuggyPawn::UpdateWheelEffects(float DeltaTime)
 			if (ContactMat != NULL)
 			{
 				bTiresTouchingGround = true;
+				float FeedbackForce = DustType->GetFeedbackForce(ContactMat, CurrentSpeed);
+				WheelDirtRoadPower += FeedbackForce;
 			}
 			UParticleSystem* WheelFX = DustType->GetDustFX(ContactMat, CurrentSpeed);
 
 			const bool bIsActive = DustPSC[i] != NULL && !DustPSC[i]->bWasDeactivated && !DustPSC[i]->bWasCompleted;
 			UParticleSystem* CurrentFX = DustPSC[i] != NULL ? DustPSC[i]->Template : NULL;
 
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Wheel " + FString::FromInt(i) + "Dust effect: " + WheelFX->GetName() );
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Wheel " + FString::FromInt(i) + ". Dust " + (bIsActive?"active":"inactive"));
+			// ** CRASHES!! ** -> UE_LOG(LogTemp, Warning, TEXT("Wheel %d contact material: %s"), i, *ContactMat->GetName());
 
 			if (WheelFX != NULL && (CurrentFX != WheelFX || !bIsActive))
 			{
@@ -240,6 +241,7 @@ void ABuggyPawn::UpdateWheelEffects(float DeltaTime)
 				DustPSC[i]->SetActive(false);
 			}
 		}
+		UE_LOG(LogTemp, Warning, TEXT("Wheel Dirt Feedback Force: %f"), WheelDirtRoadPower);
 	}
 
 	if (SkidAC != NULL)
@@ -280,6 +282,11 @@ void ABuggyPawn::OnTrackPointReached(AVehicleTrackPoint* NewCheckpoint)
 bool ABuggyPawn::IsHandbrakeActive() const
 {
 	return bHandbrakeActive;
+}
+
+float ABuggyPawn::GetWheelDirtRoadPower() const
+{
+	return WheelDirtRoadPower;
 }
 
 float ABuggyPawn::GetVehicleSpeed() const
