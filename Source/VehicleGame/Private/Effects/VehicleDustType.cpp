@@ -21,7 +21,6 @@ UParticleSystem* UVehicleDustType::GetDustFX(UPhysicalMaterial* PhysMaterial, fl
 			WheelFX = NULL;
 		}
 	}
-
 	return WheelFX;
 }
 
