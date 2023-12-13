@@ -3,7 +3,7 @@ Using Offroad vehicle template provided by Epic Games and adapted to use VR head
 
 ## Development
 * Uses UE 4.15. Download from Epic Games Launcher normally (last is 4.15.3).
-* Download Visual Studio 2015 Vanilla, Professional or Enterprise.
+* Download Visual Studio 2015 Vanilla, Professional or Enterprise. Used [this site](https://my.visualstudio.com/Downloads?q=visual%20studio%202015&wt.mc_id=o~msft~vscom~older-downloads) as of late 2023
 * Open solution with Visual Studio 2015 and build from source.
 * Open built project with Unreal Engine 4.15
 
